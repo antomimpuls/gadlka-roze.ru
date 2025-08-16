@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="utf-8">
@@ -1231,9 +1232,14 @@
     document.addEventListener('DOMContentLoaded', () => {
         // Установка изображения из настроек
         const photoElement = document.getElementById('psychicPhoto');
+        const stickyPhotoElement = document.querySelector('.sticky-whatsapp .avatar img');
         if (photoElement) {
             photoElement.src = SITE_SETTINGS.psychicImageURL;
             photoElement.alt = SITE_SETTINGS.psychicName ? `Фото ${SITE_SETTINGS.psychicName}` : "Фото гадалки";
+        }
+        if (stickyPhotoElement) {
+            stickyPhotoElement.src = SITE_SETTINGS.psychicImageURL;
+            stickyPhotoElement.alt = SITE_SETTINGS.psychicName ? `Фото ${SITE_SETTINGS.psychicName}` : "Фото гадалки";
         }
       initAllEffects();
       // Яндекс.Метрика
@@ -1415,4 +1421,3 @@
   </script>
 </body>
 </html>
-
